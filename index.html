@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.1.0/css/line-awesome.min.css">
     <title>Patrick Luong</title>
 </head>
 <body>
-    <h1>patrick luong</h1>
+    <div class="container">
+        <h1>Patrick Luong</h1>
+        <p id="desc"></p>
+        <a href="#" title="Email Patrick Luong">Contact Me</a>
+        <div class="icons-div">
+            <a href="#" class="gh">
+                <i class="lab la-github-alt"></i>
+            </a>
+            <a href="#" class="li">
+                <i class="lab la-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+    <script>
+        var typeEffect = function(target, text, i, interval) {
+            if (i < text.length) {
+                document.getElementById(target).innerHTML += text.charAt(i++);
+                setTimeout(() => {
+                    typeEffect(target, text, i, interval);
+                }, interval);
+            }
+        }
+        typeEffect('desc', 'Software Engineer', 0, 125);
+    </script>
 </body>
 </html>
