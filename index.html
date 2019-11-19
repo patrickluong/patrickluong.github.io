@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.1.0/css/line-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Patrick Luong</title>
 </head>
 <body>
     <div class="container">
-        <h1>Patrick Luong</h1>
-        <p id="desc"></p>
-        <a href="#" title="Email Patrick Luong">Contact Me</a>
-        <div class="icons-div">
-            <a href="#" class="gh">
-                <i class="lab la-github-alt"></i>
-            </a>
-            <a href="#" class="li">
-                <i class="lab la-linkedin-in"></i>
-            </a>
+        <div class="flexbox-container">
+            <h1>Patrick Luong</h1>
+            <div id="short-desc">
+                <i class="fas fa-angle-right fa-lg" style="opacity: 0.2; line-height: 1.55rem;"></i>
+                <p id="short-desc-text"></p>
+            </div>
+            <a href="#" title="Email Patrick Luong">Contact Me</a>
+            <div class="icons-div">
+                <a href="#" class="gh">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="li">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
         </div>
     </div>
     <script>
         var typeEffect = function(target, text, i, interval) {
             if (i < text.length) {
-                document.getElementById(target).innerHTML += text.charAt(i++);
+                document.getElementById(target).innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+                i++;
                 setTimeout(() => {
                     typeEffect(target, text, i, interval);
                 }, interval);
             }
         }
-        typeEffect('desc', 'Software Engineer', 0, 125);
+        typeEffect('short-desc-text', '3rd Year BS Computer Science Student at UC Irvine, Aspiring Software Engineer', 0, 90);
     </script>
 </body>
 </html>
