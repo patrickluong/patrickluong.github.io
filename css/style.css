@@ -7,6 +7,7 @@ html {
     font-size: 62.5%;
     font-family: 'Noto Sans', sans-serif;
     color: #222;
+    background: #f9f9f9;
     height: 100%;
 }
 
@@ -24,7 +25,7 @@ a {
 }
 
 span {
-    border-right: 0.05rem solid;
+    border-right: 0.15rem solid;
     animation: blinking 0.8s steps(1) infinite;
 }
 
@@ -43,12 +44,7 @@ span {
     margin-left: 0.5rem;
     font-size: 1.5rem;
     font-family: monospace;
-    color: rgba(0, 0, 0, 0.75);
-}
-
-#icons-div {
-    width: 100%;
-    text-align: center;
+    color: #666;
 }
 
 #intro {
@@ -70,6 +66,15 @@ span {
     justify-content: center;
 }
 
+.contact-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+
 .contact-btn {
     color: #fff;
     background: rgb(18, 153, 153);
@@ -77,12 +82,12 @@ span {
     border-radius: 3rem;
     font-size: 1.5rem;
     padding: 1rem 2rem;
-    margin: 1rem 0 2rem 0;
+    margin-right: 0.8rem;
     transition: all 0.3s;
 }
 
 .contact-btn:hover {
-    background: #fff;
+    background: transparent;
     color: #222;
 }
 
@@ -104,4 +109,16 @@ span {
 
 .li:hover {
     color: #0e76a8;
+}
+
+@media only screen and (min-width: 600px) {
+    /* For tablet screens */
+
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop monitors */
+    #intro {
+        width: 70%;
+    }
 }
