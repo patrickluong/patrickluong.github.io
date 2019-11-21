@@ -6,7 +6,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Noto Sans', sans-serif;
-    color: #222;
+    color: #1f1f1f;
     background: #f9f9f9;
     height: 100%;
 }
@@ -21,11 +21,11 @@ h1 {
 
 a {
     text-decoration: none;
-    color: #222;
+    color: #1f1f1f;
 }
 
 span {
-    border-right: 0.15rem solid;
+    border-right: 0.85rem solid;
     animation: blinking 0.8s steps(1) infinite;
 }
 
@@ -44,7 +44,7 @@ span {
     margin-left: 0.5rem;
     font-size: 1.5rem;
     font-family: monospace;
-    color: #666;
+    color: #555;
 }
 
 #intro {
@@ -88,7 +88,7 @@ span {
 
 .contact-btn:hover {
     background: transparent;
-    color: #222;
+    color: #1f1f1f;
 }
 
 .social-media-icon {
